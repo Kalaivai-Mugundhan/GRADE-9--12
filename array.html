@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+</head>
+
+<body>
+    <h2>JavaScript Arrays</h2>
+
+    <p id="res"></p>
+    <button onclick="Ascending()">Asc Order</button>
+    <button onclick="Descending()">Dsc Order</button>
+
+    <script>
+        var numbers = [12, 33, 43, 52, 26, 9, 88];
+        document.getElementById("res").innerHTML = numbers;
+
+        function sortAscending() {
+            numbers.sort(function (a, b) {
+                return a - b;
+            });
+            document.getElementById("res").innerHTML = numbers;
+        }
+
+        function Descending() {
+            numbers.sort(function (a, b) {
+                return b - a;
+            });
+            document.getElementById("res").innerHTML = numbers;
+        }
+    </script>
+</body>
+
+</html>
